@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SLUview</title>
+    <link rel="stylesheet" href="slu.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">SLUview</h1>
+      <p class="site-subtitle">Simple reviews viewer (HW1)</p>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar" aria-label="Filters">
+        <h2 class="section-title">Filters</h2>
+
+        <div class="form-group">
+          <label for="search" class="label">Search</label>
+          <input
+            id="search"
+            class="input"
+            type="search"
+            placeholder="Find a place…"
+          />
+        </div>
+
+        <div class="form-group">
+          <span class="label">Category</span>
+          <ul class="chip-list">
+            <li><button class="chip">Restaurants</button></li>
+            <li><button class="chip">Cafes</button></li>
+            <li><button class="chip">Hotels</button></li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <span class="label">Price</span>
+          <ul class="chip-list">
+            <li><button class="chip">$</button></li>
+            <li><button class="chip">$$</button></li>
+            <li><button class="chip">$$$</button></li>
+          </ul>
+        </div>
+
+        <div class="form-group">
+          <span class="label">Rating</span>
+          <div class="radio-group">
+            <label><input type="radio" name="rating" /> 4★+</label>
+            <label><input type="radio" name="rating" /> 3★+</label>
+            <label><input type="radio" name="rating" /> All</label>
+          </div>
+        </div>
+
+        <p class="hint-text">* Filters are visual only (non-functional).</p>
+      </aside>
+
+      <section class="featured" aria-label="Featured businesses">
+        <h2 class="section-title">Featured</h2>
+        <div id="featured-container" class="card-grid"></div>
+      </section>
+
+      <section class="reviews" aria-label="Latest reviews">
+        <div class="reviews-toolbar">
+          <h2 class="section-title">Latest Reviews</h2>
+          <div class="picker">
+            <label for="business-select" class="label">Show</label>
+            <select id="business-select" class="select"></select>
+          </div>
+        </div>
+
+        <div id="reviews-container" class="card-grid"></div>
+        <p
+          id="status-message"
+          class="status-message"
+          role="status"
+          aria-live="polite"
+        >
+          Loading…
+        </p>
+        <p id="error-message" class="error-message" hidden>
+          Couldn’t load <code>data_by_business.json</code>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for Web Technologies — SLU</p>
+    </footer>
+
+    <script defer src="app.js"></script>
+  </body>
+</html>

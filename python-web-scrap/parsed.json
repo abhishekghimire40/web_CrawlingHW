@@ -1,0 +1,14 @@
+{
+    "business": {
+        "name": "Tikka Tangy",
+        "rating": "4.7 star rating",
+        "address": "390 N Euclid Ave, Saint Louis, MO 63108",
+        "categories": [
+            "Indian",
+            "Mediterranean"
+        ],
+        "price_range": "$18.99 - $23.99",
+        "total_reviews": null
+    },
+    "reviews": []
+}
